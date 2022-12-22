@@ -28,7 +28,7 @@ int print_last_digit(int n)
 int _abs(int n)
 {
 	int i;
-	
+
 	if (n < 0)
 		i = -n;
 	else
