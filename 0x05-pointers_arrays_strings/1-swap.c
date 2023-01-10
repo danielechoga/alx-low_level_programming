@@ -8,6 +8,9 @@
  */
 void swap_int(int *a, int *b)
 {
-	*a = 42;
-	*b = 98;
+	/* local variable swp stores value of a */
+	int swp = *a;
+
+	*a = *b;
+	*b = swp;
 }
