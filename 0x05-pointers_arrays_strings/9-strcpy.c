@@ -16,13 +16,13 @@ char *_strcpy(char *dest, char *src)
 		 * store each string *(src + i) into
 		 * each space of dest + i
 		 */
-		*(dest + i) = *(src + i);
+		dest[i] = src[i];
 
 		/*
 		 * terminate loop after null character has been
 		 * stored into dest + i
 		 */
-		if (*(src + i) != '\0')
+		if (src[i] != '\0')
 			i++;
 		else
 			i = -1;
