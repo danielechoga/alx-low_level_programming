@@ -4,33 +4,35 @@
  * @s1: first string
  * @s2: second string
  *
- * Return: either 0, positive or negative value
+ * Return: 0 if s1 & s2 are equal,
+ * positive value if s1 is greater than s2,
+ * or negative value if s1 is less than s2
  */
+
 int _strcmp(char *s1, char *s2)
 {
-	int vs1 = 0; /* value of s1 */
-	int vs2 = 0; /* value of s2 */
+	int k = 0; /* loop control */
 	int comp; /* return value */
 
-	/* Count the number of characters in each string */
-	while (s1[0] != '\0')
+	while (k == 0)
 	{
-		vs1++;
-		s1++;
-	}
-	while (s2[0] != '\0')
-	{
-		vs2++;
-		s2++;
-	}
-	/* compare both strings */
+	/* compare each string */
+		if (*s1 == *s2)
+		{
+			s1++;
+			s2++;
+		}
+	/* if s1 is not equal to s2 exit loop */
+		else
+			k = 1;
 
-	if (vs1 == vs2)
-		comp = 0;
-	else if (vs1 < vs2)
-		comp = -15;
-	else if (vs1 > vs2)
-		comp = 15;
-
+	/* string s1 is the same as s2 */
+		if ((*s1 && *s2) == '\0')
+		{
+			comp = 0;
+			k = 1;
+		}
+	}
+	comp = *s1 - *s2;
 	return (comp);
 }
