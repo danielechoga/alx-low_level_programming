@@ -2,7 +2,7 @@
 /**
  * _strcmp - function compares two strings
  * @s1: first string
- * @s@: second string
+ * @s2: second string
  *
  * Return: either 0, positive or negative value
  */
@@ -29,7 +29,7 @@ int _strcmp(char *s1, char *s2)
 		comp = 0;
 	else if (vs1 < vs2)
 		comp = -15;
-	else
+	else if (vs1 > vs2)
 		comp = 15;
 
 	return (comp);
